@@ -5,11 +5,11 @@ addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
-const dockerHub = "https://registry-1.docker.io";
+const dockerHub = "https://docker.io";
 
 const routes = {
   // production
-  "docker.szzskj.asia": dockerHub,
+  "docker.szzskj.asia": "https://docker.io",
   "quay.szzskj.asia": "https://quay.io",
   "gcr.szzskj.asia": "https://gcr.io",
   "k8s-gcr.szzskj.asia": "https://k8s.gcr.io",
@@ -18,7 +18,7 @@ const routes = {
   "cloudsmith.szzskj.asia": "https://docker.cloudsmith.io",
 
   // staging
-  "docker-staging.szzskj.asia": dockerHub,
+  "docker-staging.szzskj.asia": "https://docker.io",
 };
 
 function routeByHosts(host) {
